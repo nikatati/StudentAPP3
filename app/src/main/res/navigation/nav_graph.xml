@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentRecyclerFragment">
+
+    <fragment
+        android:id="@+id/studentRecyclerFragment"
+        android:name="com.example.class4simplelist.StudentRecyclerFragment"
+        android:label="Student List"
+        tools:layout="@layout/fragment_student_recycler">
+        <action
+            android:id="@+id/action_studentListFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+        <action
+            android:id="@+id/action_studentRecyclerFragment_to_studentInfoFragment"
+            app:destination="@id/studentInfoFragment" >
+            <argument
+                android:name="studentid" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/studentInfoFragment"
+        android:name="com.example.class4simplelist.StudentDetailsFragment"
+        android:label="Student Details"
+        tools:layout="@layout/fragment_student_info">
+        <argument
+            android:name="studentid"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_studentDetailsFragment_to_studentEditFragment"
+            app:destination="@id/studentEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.class4simplelist.AddStudentFragment"
+        android:label="Add Student"
+        tools:layout="@layout/fragment_add_student">
+        <action
+            android:id="@+id/action_addStudentFragment_to_studentRecyclerFragment"
+            app:destination="@id/studentRecyclerFragment"
+            app:popUpTo="@id/studentRecyclerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentEditFragment"
+        android:name="com.example.class4simplelist.EditStudentFragment"
+        android:label="Edit Student"
+        tools:layout="@layout/fragment_edit_student">
+        <action
+            android:id="@+id/action_studentEditFragment_to_studentListFragment"
+            app:destination="@id/studentRecyclerFragment" />
+        <argument
+            android:name="studentid"
+            app:argType="string" />
+    </fragment>
+</navigation>

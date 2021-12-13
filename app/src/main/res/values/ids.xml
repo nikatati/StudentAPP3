@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView10" type="id" />
+    <item name="imageView" type="id" />
+    <item name="EditBtnSI" type="id" />
+    <item name="student_details_cb" type="id" />
+    <item name="textView2" type="id" />
+    <item name="sd_name_tv" type="id" />
+    <item name="sd_address_tv" type="id" />
+    <item name="sd_phone_tv" type="id" />
+    <item name="textView5" type="id" />
+    <item name="sd_id_tv" type="id" />
+</resources>
